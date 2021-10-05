@@ -1,27 +1,68 @@
-public class Example25  {
+// Java program for the above approach 
 
-    public static void main(String args[])
+  
 
-    {
+class GFG { 
 
-	int n,a=1,b=0,c;
+  
 
-    System.out.println("First 20 Pell numbers: ");
+    // Function to print N Fibonacci Number 
 
-    for(n=1; n<=20; n++)
+    static void Fibonacci(int N) 
 
-     {
+    { 
 
-      c= a + 2*b;
+        int num1 = 0, num2 = 1; 
 
-      System.out.print(c+" ");
+  
 
-      a = b;
+        int counter = 0; 
 
-      b = c;
+  
 
-     }
+        // Iterate till counter is N 
 
-   }
+        while (counter < N) { 
 
- }
+  
+
+            // Print the number 
+
+            System.out.print(num1 + " "); 
+
+  
+
+            // Swap 
+
+            int num3 = num2 + num1; 
+
+            num1 = num2; 
+
+            num2 = num3; 
+
+            counter = counter + 1; 
+
+        } 
+
+    } 
+
+  
+
+    // Driver Code 
+
+    public static void main(String args[]) 
+
+    { 
+
+        // Given Number N 
+
+        int N = 10; 
+
+  
+
+        // Function Call 
+
+        Fibonacci(N); 
+
+    } 
+} 
